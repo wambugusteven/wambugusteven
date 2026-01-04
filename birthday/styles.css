@@ -1,0 +1,101 @@
+
+body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      font-size: 50px;
+    }
+    
+
+.homePage {
+    top: 15px;
+    text-align: center;
+}
+
+    h1 {
+        color: black;
+        text-align: center;
+        font-size: 70px;
+        margin-bottom: 10px;
+    }
+
+.container {
+    width: 80%;
+    background-color: linearar-gradient(to right, #771144, #f5087e);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    display: none;
+    
+}
+button {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+
+
+button:hover {
+    background-color:#771144;
+    transform: scale(1.5);
+    transition: transform 1s, background-color 0.3s, color 0.3s;
+    color: black;
+}
+
+/* suprise section */
+
+.photos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+img {
+    width: 290px;
+    min-height: 200px;
+    border-radius: 10px;
+    background-color: pink;
+    text-align: center;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.videos {
+    padding: 20px;
+    border-radius: 15px;
+    gap: 20px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* birthday decoration */
+ 
+.flowers , .balloons{
+    display: flex;
+    justify-content: space-between;
+
+}
+ 
+.flower, .balloon{
+    width: 100px;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+}
