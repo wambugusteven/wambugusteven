@@ -73,15 +73,6 @@ function compareAnswers() {
    }
 }
 
-// Calculate total score
-    let expression = 0;
-    let m;
-      for(m = 0; m < points.length; m++) {
-         if(points[m].innerHTML === "points: 2") {
-            expression += 2;
-         };
-         document.getElementById("results").value = expression;
-      }
  }
 
 document.getElementById("submit").addEventListener("click", compareAnswers);

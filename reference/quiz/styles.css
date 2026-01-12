@@ -18,7 +18,7 @@ body {
     border-radius: 8px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: xx-large;
-     display: none;
+    display: none;   
 }
 
 .container {
@@ -30,6 +30,7 @@ body {
     width: 75%;
     align-items: left;
     text-align: left;
+    
 }
 
 .quiz {
@@ -39,6 +40,7 @@ body {
     border-radius: 15px;
     padding: 20px;
     font-size: medium;
+   
 }
 
 input[type="text"] {
@@ -50,16 +52,17 @@ input[type="text"] {
     font-size: medium;
 }
 
-.start {
+.start, .submit {
     background-color: #4CAF50;
     cursor: pointer;
     width: 12.5rem;
     height: 5rem;
     border-radius: 20px;
     font-size: medium;
+    margin: 20px;
 }
 
-.start:Hover {
-    transition: transform 0.2s;
-    transform: scale(1.5);
+.start:Hover, .submit:Hover {
+    transition: all 0.2s;
+    transform: scale(1.1);
 }
