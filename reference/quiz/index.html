@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+     <meta charset ="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Reference</title>
+    <link rel="stylesheet" href="styles.css" />
+ </head>
+ <body>
+            <h1>Quiz Reference</h1>
+
+            <div class="homePage">
+                <p>Welcome to Quiz test. Test your common and football knowledge here. Aim to achieve the highest score possible!</p>
+                <p>Total Marks: <span class="marks" id="marks"></span></p>
+                <p>Note the number of attempts allowed is <em>2</em> with a maximum of <em>15 minutes</em></p>
+                <button id="start" class="start">Attempt Quiz</button>
+            </div>
+
+    <div class="container">
+        <p><h2>Questions</h2> <span class ="results"></span></p>
+        <div class="quiz" id="quiz">
+            <h3>Question: 1</h3>
+            <p>What is the Capital City of france?  <strong>(2 Marks)</strong> </p>
+            <label>
+               <input type="text" id="input1" required/>
+               <div class="scores" id="scores1"> </div>
+               <div id="correct1"></div>
+            </label>
+        </div>
+
+        <div class="quiz" id="quiz"> 
+            <h3>Question: 2</h3>
+            <p>Which club is the biggest in London?  <strong>(2 Marks)</strong> </p>
+            <label>
+               <input type="text" id="input2"/>
+                <div class="scores" id="scores2"> </div>
+               <div id="correct2"></div>
+            </label>
+        </div>
+
+        <div class="quiz" id="quiz">
+            <h3>Question: 3</h3>
+            <p>Which club has most UCL trophies in the history?  <strong>(2 Marks)</strong> </p>
+            <label>
+               <input type="text" id="input3"/>
+               <div class="scores" id="scores3"> </div>
+                <div id="correct3"></div>
+            </label>
+        </div>
+
+        <div class="quiz" id="quiz">
+            <h3>Question: 4</h3>
+            <p>Who is the greatest goal scorer of all time?  <strong>(2 Marks)</strong> </p>
+            <label>
+               <input type="text" id="input4"/>
+               <div class="scores" id="scores4"> </div>
+                <div id="correct4"></div>
+            </label>
+        </div>
+
+         <div class="quiz" id="quiz">
+            <h3>Question: 5</h3>
+            <p>When was the last time Arsenal won a major trophy?  <strong>(2 Marks)</strong> </p>
+            <label>
+               <input type="text" id="input5"/>
+               <div class="scores" id="scores5"> </div>
+                <div id="correct5"></div>
+            </label>
+        </div>
+
+        <div class="quiz" id="quiz">
+            <h3>Question: 6</h3>
+            <p>What is the Capital City of spain?  <strong>(2 Marks)</strong> </p>
+            <label>
+               <input type="text" id="input6"/>
+               <div class="scores" id="scores6"> </div>
+                <div id="correct6"></div>
+            </label>
+        </div>
+
+        <div class="quiz" id="quiz">
+            <h3>Question: 7</h3>
+            <p>What is the Capital City of Germany?  <strong>(2 Marks)</strong> </p>
+            <label>
+               <input type="text" id="input7"/>
+               <div class="scores" id="scores7"> </div>
+                <div id="correct7"></div>
+            </label>
+        </div>
+
+        <div class="quiz" id="quiz">
+            <h3>Question: 8</h3>
+            <p>What is the Capital City of italy?  <strong>(2 Marks)</strong> </p>
+            <label>
+               <input type="text" id="input8"/>
+               <div class="scores" id="scores8"> </div>
+               <div id="correct8"></div>
+            </label>
+        </div>
+ 
+         <div class="quiz" id="quiz">
+            <h3>Question: 9</h3>
+            <p>What is the Capital City of portugal?  <strong>(2 Marks)</strong> </p>
+            <label>
+               <input type="text" id="input9"/>
+               <div class="scores" id="scores9"> </div>
+                <div id="correct9"></div>
+            </label>
+         </div>
+
+             <button id="submit" class="submit">Check</button>
+    </div>
+    <script src="script.js"></script>
+ </body>
+</html>
