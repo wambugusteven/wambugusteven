@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learning Platform Prototype</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      background: #2c3e50;
+      color: white;
+      padding-top: 20px;
+      position: fixed;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover {
+      background: #34495e;
+    }
+
+    /* Main content */
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    input {
+      display: block;
+      margin: 10px 0;
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+
+    /* Chatbot */
+    #chatbox {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      background: white;
+      border: 1px solid #ccc;
+    }
+
+    #chatHeader {
+      background: #2c3e50;
+      color: white;
+      padding: 10px;
+    }
+
+    #messages {
+      height: 200px;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    #chatbox input {
+      width: 70%;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Sidebar Menu -->
+<div class="sidebar">
+  <h2>LearnApp</h2>
+
+  <a onclick="showPage('dashboard')">🏠 Dashboard</a>
+  <a onclick="showPage('signup')">🔐 Signup</a>
+  <a onclick="showPage('papers')">📄 Past Papers</a>
+  <a onclick="openChat()">🤖 AI Assistant</a>
+</div>
+
+<!-- Main Content -->
+<div class="content">
+
+  <!-- Dashboard -->
+  <div id="dashboard" class="page active">
+    <h2>Welcome to LearnApp</h2>
+    <p>Select a feature from the menu.</p>
+  </div>
+
+  <!-- Signup -->
+  <div id="signup" class="page">
+    <h2>Signup</h2>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button onclick="alert('Account Created!')">Sign Up</button>
+  </div>
+
+  <!-- Past Papers -->
+  <div id="papers" class="page">
+    <h2>Past Papers</h2>
+    <ul>
+      <li>Math 2023 <button>Download</button></li>
+      <li>Math 2022 <button>Download</button></li>
+      <li>English 2023 <button>Download</button></li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Chatbot -->
+<div id="chatbox">
+  <div id="chatHeader">AI Assistant</div>
+  <div id="messages"></div>
+
+  <input type="text" id="userInput" placeholder="Ask something...">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+  function showPage(pageId) {
+    let pages = document.querySelectorAll(".page");
+    pages.forEach(p => p.classList.remove("active"));
+
+    document.getElementById(pageId).classList.add("active");
+  }
+
+  function openChat() {
+    document.getElementById("chatbox").style.display = "block";
+  }
+
+  function sendMessage() {
+    let input = document.getElementById("userInput").value;
+    let messages = document.getElementById("messages");
+
+    if (input.trim() === "") return;
+
+    messages.innerHTML += "<p><b>You:</b> " + input + "</p>";
+
+    // Simple AI response (prototype)
+    let reply = "I can help you with that! Try studying algebra or checking past papers.";
+
+    messages.innerHTML += "<p><b>AI:</b> " + reply + "</p>";
+
+    document.getElementById("userInput").value = "";
+  }
+</script>
+
+</body>
+</html>
